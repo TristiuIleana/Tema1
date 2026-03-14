@@ -12,4 +12,14 @@ public class Student {
         public String toString(){
             return numarMatricol + " " + prenume + " " + nume + " " + formatieDeStudiu;
         }
+        public String getPrenume(){
+            return prenume;
+        }
+        public String getNume(){
+            return nume;
+        }
+        public String getFormatieDeStudiu(){
+            return formatieDeStudiu;
+        }
 }
+public boolean
