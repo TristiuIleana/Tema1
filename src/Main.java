@@ -55,6 +55,7 @@ public static void main(String[]  args) {
     for (Student s : listaStudenti) {
         System.out.println(s.toString());
     }
+
     Student s1 = new Student("120", "Alis", "Popa", "TI21/2");
     boolean gasit = existaStudent(listaStudenti, s1);
     System.out.println("Exista Alis Popa in lista " + gasit);
@@ -62,6 +63,10 @@ public static void main(String[]  args) {
     Student s2 = new Student("112", "Maria", "Popa", "TI21/1");
     boolean gasit2 = existaStudent(listaStudenti, s2);
     System.out.println("Exista Maria Popa in lista " + gasit2);
+
+    Set<Student> setStudenti = new HashSet<>(listaStudenti);
+    System.out.println("Exista Alis Popa in lista " + setStudenti.contains(s1));
+    System.out.println("Exista Maria Popa in lista " + setStudenti.contains(s2));
 }
     public static boolean existaStudent (List < Student > lista, Student cautat){
         for (Student s : lista) {
