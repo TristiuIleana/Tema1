@@ -1,4 +1,9 @@
-public static void main(String[]  args) {
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.io.IOException;
+import java.util.*;
+
+public static void main(String[]  args) throws IOException{
     Student student1 = new Student("615", "Ileana", "Tristiu", "21/1");
     System.out.println(student1);
 
@@ -67,7 +72,52 @@ public static void main(String[]  args) {
     Set<Student> setStudenti = new HashSet<>(listaStudenti);
     System.out.println("Exista Alis Popa in lista " + setStudenti.contains(s1));
     System.out.println("Exista Maria Popa in lista " + setStudenti.contains(s2));
+
+    //EXERCITIUL 3.5.2
+    List<String> lines = Files.readAllLines(Paths.get("src/studenti_in.txt"));
+    List<Student> studenti = new ArrayList<>();
+    for(String line : lines){
+        String[] a = line.split(",");
+        Student s = new Student(
+            a[0],
+            a[1],
+            a[2],
+            a[3]
+        );
+        studenti.add(s);
+    }
+    System.out.println("Studenti cititi:");
+    for(Student s : studenti){
+        System.out.println(s);
+    }
+    studenti.sort(Comparator.comparing(Student::getNume));
+    System.out.println("Sortarea noua: ");
+    for(Student s : studenti){
+        System.out.println(s);
+    }
+    List<String> out = new ArrayList<>();
+    for(Student s : studenti) {
+        out.add(s.toString());
+    }
+    Files.write(Paths.get("src/studenti_out.txt"),out);
+
+    //3.5.3
+    studenti.sort(
+            Comparator
+                    .comparing(Student::getFormatieDeStudiu)
+                    .thenComparing(Student::getNume)
+    );
+    for(Student s : studenti){
+        System.out.println(s);
+    }
+    List<String> out2 = new ArrayList<>();
+    for(Student s : studenti){
+        out2.add(s.toString());
+    }
+    Files.write(Paths.get("studenti_out_sorted.txt"),out2);
+
 }
+
     public static boolean existaStudent (List < Student > lista, Student cautat){
         for (Student s : lista) {
             if (s.getPrenume().equals(cautat.getPrenume()) &&

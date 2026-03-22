@@ -11,6 +11,7 @@ public class Student {
             this.nume = nume;
             this.formatieDeStudiu = formatieDeStudiu;
         }
+        @Override
         public String toString(){
             return numarMatricol + " " + prenume + " " + nume + " " + formatieDeStudiu;
         }
@@ -23,6 +24,7 @@ public class Student {
         public String getFormatieDeStudiu(){
             return formatieDeStudiu;
         }
+
 
         public boolean equals(Object o){
             if (this == o)
