@@ -1,7 +1,6 @@
 package lab4;
 import java.io.File;
 import java.util.*;
-import java.util.Scanner;
 
 //4.5.1
 public class AppLab4 {
@@ -39,4 +38,9 @@ public class AppLab4 {
         tineri.forEach((k, v) -> System.out.println(k + " -> " + v));
     }
 
+    public static float gasesteNota(String prenume, String nume, HashMap<Integer, Student> student) {
+        String key = prenume + "-" + nume;
+        Student i = student.get(key);
+        return (i != null ) ? i.getNota() : 0.0f;
+    }
 }
