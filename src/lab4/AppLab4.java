@@ -1,6 +1,9 @@
 package lab4;
+import java.io.File;
 import java.util.*;
+import java.util.Scanner;
 
+//4.5.1
 public class AppLab4 {
     static void main(String[] args) {
         HashMap<String, Integer> varste = new HashMap<>();
@@ -35,4 +38,5 @@ public class AppLab4 {
         System.out.println("Lista tineri: ");
         tineri.forEach((k, v) -> System.out.println(k + " -> " + v));
     }
+
 }
