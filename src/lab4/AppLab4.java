@@ -38,9 +38,9 @@ public class AppLab4 {
         tineri.forEach((k, v) -> System.out.println(k + " -> " + v));
     }
 
-    public static float gasesteNota(String prenume, String nume, HashMap<Integer, Student> student) {
+    public static float gasesteNota(String prenume, String nume, HashMap<String, Student> studenti) {
         String key = prenume + "-" + nume;
-        Student i = student.get(key);
+        Student i = studenti.get(key);
         return (i != null ) ? i.getNota() : 0.0f;
     }
 }

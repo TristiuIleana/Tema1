@@ -48,11 +48,6 @@ public static void main(String[]  args) throws IOException {
     studentHashMap.values().forEach(s -> System.out.println(s));
 
     HashMap<Integer, Student> studenti = new HashMap<>();
-     HashMap<String, Student> mapNume = new HashMap<>();
-    for(Student s:studenti.values()){
-        String key = s.getPrenume() + "-" + s.getNume();
-        mapNume.put(key,s);
-    }
     Student s1 = new Student(1029, "Bianca", "Popescu", "TI131/1");
     s1.setNota(9.10f);
     studenti.put(1029, s1);
@@ -60,6 +55,11 @@ public static void main(String[]  args) throws IOException {
     Student s2 = new Student(1024, "Ioan", "Mihalcea", "ISM141/1");
     s2.setNota(9.80f);
     studenti.put(1024, s2);
+     HashMap<String, Student> mapName = new HashMap<>();
+    for(Student s:studenti.values()){
+        String key = s.getPrenume() + "-" + s.getNume();
+        mapName.put(key,s);
+    }
 
     float notaM = gasesteNota("Bianca", "Popescu", studenti);
     float notaN = gasesteNota("Ioan", "Popa", studenti);
