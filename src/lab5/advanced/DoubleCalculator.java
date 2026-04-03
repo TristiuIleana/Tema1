@@ -18,6 +18,7 @@ public class DoubleCalculator extends ACalculator {
     }
     @Override
     protected void init() {
+
         state = 0.0;
     }
 }
