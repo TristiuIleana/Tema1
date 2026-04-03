@@ -18,6 +18,6 @@ public class AppLab5 {
 
         DoubleCalculator dcalc = new DoubleCalculator(10);
         double result4 = (Double) dcalc.add(5).subtract(3.3).multiply(2.2).result();
-        System.out.println("ex2 b)" + result4);
+        System.out.println("b)" + result4);
     }
 }

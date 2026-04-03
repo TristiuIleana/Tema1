@@ -4,7 +4,8 @@ public abstract class ACalculator {
     protected Object state;
 
     public Object result(){
-        return result();
+
+        return state;
     }
 
     public ACalculator clear(){
