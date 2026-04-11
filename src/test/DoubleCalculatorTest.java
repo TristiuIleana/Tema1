@@ -27,3 +27,4 @@ public class DoubleCalculatorTest {
         Assertions.assertEquals(10.0, calc.add(2.0).add(3.0).multiply(2.0).result());
     }
 }
+//

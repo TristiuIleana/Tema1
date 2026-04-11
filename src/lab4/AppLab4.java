@@ -44,4 +44,3 @@ public class AppLab4 {
         return (i != null ) ? i.getNota() : 0.0f;
     }
 }
-//a
