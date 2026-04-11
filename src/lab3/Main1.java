@@ -4,7 +4,6 @@ import java.nio.file.Paths;
 import java.io.IOException;
 import java.util.*;
 import lab4.Student;
-
 import static lab4.Student.existaStudent;
 
 public static void main(String[]  args) throws IOException  {
@@ -119,5 +118,6 @@ public static void main(String[]  args) throws IOException  {
         out2.add(s.toString());
     }
     Files.write(Paths.get("studenti_out_sorted.txt"), out2);
+
 
 }
