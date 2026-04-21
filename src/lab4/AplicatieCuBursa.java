@@ -12,7 +12,6 @@ public class AplicatieCuBursa {
         for (StudentBursier student : lista) {
             System.out.println(student);
         }
-        System.out.println("--------------------------------------------------");
         List<StudentBursier> sortata = instanta.sorteaza(lista);
         for (StudentBursier student : sortata) {
             System.out.println(student);

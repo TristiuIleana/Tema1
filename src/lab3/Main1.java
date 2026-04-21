@@ -119,5 +119,4 @@ public static void main(String[]  args) throws IOException  {
     }
     Files.write(Paths.get("studenti_out_sorted.txt"), out2);
 
-
 }
