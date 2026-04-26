@@ -35,20 +35,7 @@ public final class Student {
                 st.getNota()
         );
     }
-    static Set<Student> imparteInDouaFormatii(Set<Student> studenti, String f1, String f2){
-        Set<Student> rezultat = new HashSet<>();
-        int i = 0;
-        int jumatate = studenti.size() / 2 + studenti.size() % 2;
-        for(Student s : studenti){
-            if(i < jumatate){
-                rezultat.add(schimbaFormatie(s,f1));
-            }else{
-                rezultat.add(schimbaFormatie(s, f2));
-            }
-            i++;
-        }
-        return rezultat;
-    }
+
     @Override
     public String toString() {
         return numarMatricol + " " + prenume + " " + nume + " " + FormatieDeStudiu + " nota=" + nota;
@@ -95,3 +82,4 @@ public final class Student {
         return false;
     }
 }
+
