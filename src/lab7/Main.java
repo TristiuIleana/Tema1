@@ -5,7 +5,6 @@ import lab7.forms.Square;
 import lab7.forms.Form;
 import lab7.util.StringRandomizer;
 import lab7.util.PasswordMaker;
-
 import java.util.List;
 import java.util.ArrayList;
 import lab3.Student;
