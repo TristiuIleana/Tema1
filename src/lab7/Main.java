@@ -31,10 +31,11 @@ public class Main {
         System.out.println("\n7.6.2 c) Number of time getInstance() has been called: " + PasswordMaker.getCallingCount());
 
         List<Student> studenti = new ArrayList<>();
-        studenti.add(new Student(1, "Ioana", "Popa", "TI21/1", 9));
+        studenti.add(new Student(1, "Ioana", "Popa", "TI21/2", 9));
         studenti.add(new Student(2, "Elena", "Ionescu", "TI21/2", 8));
-        studenti.add(new Student(3, "Maria", "Popescu", "TI21/1", 7));
+        studenti.add(new Student(3, "Maria", "Popescu", "TI21/2", 7));
         studenti.add(new Student(4, "Irina", "Pop", "TI21/2", 6));
+
         studenti = imparteInDouaFormatii(
                 studenti,
                 "TI21/1",
@@ -57,14 +58,21 @@ public class Main {
         static List<Student> imparteInDouaFormatii(List<Student> studenti, String f1, String f2){
             List<Student> rezultat = new ArrayList<>();
             int i = 0;
-            int jumatate = (studenti.size() + 1) / 2;
+            int jumatate = 0 ;
             for(Student s : studenti){
-                if(i < jumatate){
-                    rezultat.add(schimbaFormatia(s,f1));
+                if(studenti.size() % 2 == 0){
+                    jumatate = studenti.size()/2;
                 }else{
-                    rezultat.add(schimbaFormatia(s,f2));
+                    jumatate = studenti.size()/2+1;
+
                 }
-                i++;
+            }
+            for(Student s : studenti){
+                if(i < jumatate) {
+                    rezultat.add(schimbaFormatia(s, f1));
+                } else {
+                    rezultat.add(schimbaFormatia(s, f2));
+                }i++;
             }
             return rezultat;
         }

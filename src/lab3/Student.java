@@ -19,9 +19,6 @@ public final class Student {
         this.nota = nota;
     }
 
-    //public void setNota(float nota) {
-       // this.nota = nota;
-    //}
 
     public float getNota() {
         return nota;
