@@ -1,9 +1,12 @@
 
 package lab3;
 
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.*;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.ArrayList;
 public final class Student {
     private final int numarMatricol;
     private final String prenume;
