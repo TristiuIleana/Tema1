@@ -133,6 +133,9 @@ public final class Student {
         //e
         float medie = suma / studentiCuNote.size();
         System.out.printf("e) Media notelor: "  + medie);
+        System.out.println("Laborator 10");
+
+
     }
 
 }
