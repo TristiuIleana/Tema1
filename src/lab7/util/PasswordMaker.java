@@ -12,6 +12,7 @@ public class PasswordMaker {
     }
 
     private PasswordMaker(String name) {
+
         this.name = name;
     }
     private static PasswordMaker instance = null;

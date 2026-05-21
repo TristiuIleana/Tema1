@@ -135,7 +135,12 @@ public final class Student {
         System.out.printf("e) Media notelor: "  + medie);
         System.out.println("Laborator 10");
 
+        Exporter exporter = new Exporter();
 
+        IStudentiExport exportDecorat =
+                new Decorator(new StudentiInConsola());
+
+        exporter.startExport(exportDecorat, studentiCuNote);
     }
 
 }
