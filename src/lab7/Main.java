@@ -35,7 +35,6 @@ public class Main {
         studenti.add(new Student(2, "Elena", "Ionescu", "TI21/2", 8));
         studenti.add(new Student(3, "Maria", "Popescu", "TI21/2", 7));
         studenti.add(new Student(4, "Irina", "Pop", "TI21/2", 6));
-
         studenti = imparteInDouaFormatii(
                 studenti,
                 "TI21/1",
@@ -59,14 +58,12 @@ public class Main {
             List<Student> rezultat = new ArrayList<>();
             int i = 0;
             int jumatate = 0 ;
-            for(Student s : studenti){
                 if(studenti.size() % 2 == 0){
                     jumatate = studenti.size()/2;
                 }else{
                     jumatate = studenti.size()/2+1;
 
                 }
-            }
             for(Student s : studenti){
                 if(i < jumatate) {
                     rezultat.add(schimbaFormatia(s, f1));
